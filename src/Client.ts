@@ -8,42 +8,37 @@
 import { ACTION } from "./Globals";
 
 export default class Client implements IPriceManager {
-    private readonly config: IConfig;
+  private readonly config: IConfig;
 
-    public constructor(config: IConfig) {
-        this.config = config;
+  public constructor(config: IConfig) {
+    this.config = config;
 
-        context.subscribe("action.execute", event => {
-            if (event.action !== ACTION)
-                return;
+    context.subscribe("action.execute", (event) => {
+      if (event.action !== ACTION) return;
 
-            const args = <PriceManagerActionArgs>event.args;
-            switch (args.type) {
-                case "setValue":
-                    return;
-                case "getValue":
-                    return;
-                case "broadcastValue":
-                    return this.broadcastValue(args);
-                case "updatePrices":
-                    return;
-            }
-        });
-    }
+      const args = <PriceManagerActionArgs>event.args;
+      switch (args.type) {
+        case "setValue":
+          return;
+        case "getValue":
+          return;
+        case "broadcastValue":
+          return this.broadcastValue(args);
+        case "updatePrices":
+          return;
+      }
+    });
+  }
 
-    private broadcastValue(args: BroadcastValueActionArgs): void {
-        (<Observable<any>>this.config[args.key]).setValue(args.value);
-    }
+  private broadcastValue(args: BroadcastValueActionArgs): void {
+    (<Observable<any>>this.config[args.key]).setValue(args.value);
+  }
 
-    public updatePrices(makeRidesFree: boolean = false): void {
-        const args: UpdatePricesActionArgs = {
-            type: "updatePrices",
-            makeRidesFree: makeRidesFree,
-        }
-        context.executeAction(
-            ACTION,
-            args,
-            () => { },
-        );
-    }
+  public updatePrices(makeRidesFree: boolean = false): void {
+    const args: UpdatePricesActionArgs = {
+      type: "updatePrices",
+      makeRidesFree: makeRidesFree,
+    };
+    context.executeAction(ACTION, args, () => {});
+  }
 }

@@ -27,8 +27,8 @@ This plug-in is based on the famous [Ride Price Manager](https://github.com/mgov
 
 1. Make sure that your OpenRCT2 version is up-to-date. You need at least version `0.3.4` or a recent development version.
 2. Go to the [releases](https://github.com/Sadret/openrct2-price-manager/releases) page.\
-If your OpenRCT version is `0.4.4` or a recent development version, download the file [`openrct2-price-manager-1.1.2.js`](https://github.com/Sadret/openrct2-price-manager/releases/download/v1.1.2/openrct2-price-manager-1.1.2.js) from the latest release. Otherwise, download the file [`openrct2-price-manager-1.1.1.js`](https://github.com/Sadret/openrct2-price-manager/releases/download/v1.1.1/openrct2-price-manager-1.1.1.js) from the release "v1.1.1 Bugfix".\
-Save it in the `plugin` subfolder of your OpenRCT2 user directory. On Windows, this is usually at `C:Users\{User}\Documents\OpenRCT2\plugin`.
+   If your OpenRCT version is `0.4.4` or a recent development version, download the file [`openrct2-price-manager-1.1.2.js`](https://github.com/Sadret/openrct2-price-manager/releases/download/v1.1.2/openrct2-price-manager-1.1.2.js) from the latest release. Otherwise, download the file [`openrct2-price-manager-1.1.1.js`](https://github.com/Sadret/openrct2-price-manager/releases/download/v1.1.1/openrct2-price-manager-1.1.1.js) from the release "v1.1.1 Bugfix".\
+   Save it in the `plugin` subfolder of your OpenRCT2 user directory. On Windows, this is usually at `C:Users\{User}\Documents\OpenRCT2\plugin`.
 3. Start OpenRCT2 and open a scenario.
 
 ## Usage

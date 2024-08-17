@@ -8,11 +8,11 @@
 import { PREFIX } from "./Globals";
 
 export default class LocalPersistence implements Persistence {
-    public get<T>(key: keyof IConfig, defaultValue: T): T {
-        return context.sharedStorage.get(PREFIX + key, defaultValue);
-    }
+  public get<T>(key: keyof IConfig, defaultValue: T): T {
+    return context.sharedStorage.get(PREFIX + key, defaultValue);
+  }
 
-    public set<T>(key: keyof IConfig, value: T): void {
-        return context.sharedStorage.set(PREFIX + key, value);
-    }
+  public set<T>(key: keyof IConfig, value: T): void {
+    return context.sharedStorage.set(PREFIX + key, value);
+  }
 }

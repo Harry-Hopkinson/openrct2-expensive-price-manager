@@ -5,8 +5,8 @@
   "author": "Sadret and Harry-Hopkinson",
   "license": "GPL-3.0",
   "scripts": {
-    "build-develop": "rollup -c rollup.config.develop.js",
-    "build-release": "rollup -c rollup.config.release.js",
+    "build": "rollup -c rollup.config.develop.js",
+    "build:release": "rollup -c rollup.config.release.js",
     "format": "prettier --write ."
   },
   "devDependencies": {
